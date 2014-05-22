@@ -16,3 +16,10 @@
            (:name (find-one db 1)) => "baz"
            (count (.list db)) => 2
            (count (find-all db #(= (:name %) "baz"))) => 1))
+
+(facts "load"
+       (let [db (tmp-db)
+             max 100]
+         (dotimes [n max] (insert! db {:foo n}))
+         (count (find-all db)) => max
+         (:foo (find-one db max)) => (- max 1)))
