@@ -42,3 +42,21 @@
 
 (defn update! [db id doc]
   (write-doc! db id doc))
+
+(defn list!
+  ([path] (list! path (list)))
+  ([path val] ()))
+
+(defn vec!
+  ([path] (vector! path (vector)))
+  ([path val] ()))
+
+(defn hash-set!
+  ([path] (hash-set! path (hash-set)))
+  ([path val] ()))
+
+(defn hash-map!
+  ([path] (hash-map! path (hash-map)))
+  ([path val] ()))
+
+
