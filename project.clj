@@ -2,4 +2,5 @@
   :description "File-based document store"
   :url "https://github.com/garamond/filofacts"
   :dependencies [[org.clojure/clojure "1.6.0"]]
-  :profiles {:dev {:dependencies [[midje "1.6.3"]]}})
+  :profiles {:dev {:dependencies [[midje "1.6.3"]]
+                   :plugins [[lein-midje "3.0.0"]]}})
